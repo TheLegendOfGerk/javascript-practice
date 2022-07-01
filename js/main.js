@@ -21,7 +21,7 @@ three = 3;
 
 console.log(yes, Yes, one, two);
 
-title = 'Hello World'; // string
+title = 'Helloooo World'; // string
 
 console.log(myname, favfood);
 
