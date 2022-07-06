@@ -85,4 +85,4 @@ console.log(`My score is ${score}`); //use tildes for "advanced strings"!
 
 console.log(gradiusThree.year);
 
-console.log(Supercalifragelisticexpialadocious.length)
+console.log('Supercalifragelisticexpialadocious'.length)
