@@ -69,13 +69,18 @@ const popups = {
     confirm: confirm('Do you wish to confirm?'), //ask a yes/no question
     prompt: prompt('prompt'),
 }
-*/
+
 const answer = popups.prompt;
-console.log(answer)
+console.log(answer) */
 
 const dates = {
     now: new Date(),
     days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 }
 
-console.log(dates. now);
+console.log(dates.now);
+
+// Math commands, use upper case M. Fairly straightforward!
+const math = {
+    methods
+}
