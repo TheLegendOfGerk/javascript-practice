@@ -56,6 +56,16 @@ const strings = {
         split: 'simple'.split('mp'),            //Splits it into pre-mp and post-mp
         trimStart: '    simple   '.trimStart(),
         trimEnd: '    simple   '.trimEnd(),
+        trimStart: '  simple  '.trimStart(),
+        trimEnd: '  simple  '.trimEnd(),
+        localeCompare: 'simple'.localeCompare('simple'),
+        match: 'simple'.match(/simple/),
+        replace: 'simple'.replace(/simple/, 'complex'),
+        search: 'simple'.search(/simple/),
+        split: 'simple'.split(/simple/),
+        concat: 'simple'.concat('complex'),
+        codePointAt: 'simple'.codePointAt(6),
+        normalize: 'simple'.normalize(),
 
     },
     myMethod: function() {
