@@ -1,80 +1,63 @@
-// if's
+// functions
+// keyword: function
+// function name(parameter) { does something; optionally, "return value" }
 
-if ('truthy')
-    { console.log('truthy') }
-else
-    {console.log('the condition is falsy')};
-
-
-
-//falsy values
-false;
-0;
-'';
-// one for the primary three data types
-null;
-undefined;
-NaN;
-
-//truthy values = whatever's not falsy
-true;
-1.1;
-'string';
--1;
-'etc.';
-
-if (false){
-    console.log('false will not trigger');
-}
-if (0){
-    console.log('0 will not trigger');
-}
-if (''){
-    console.log('empty string will not trigger');
-}
-if (null){
-    console.log('null will not trigger');
-}
-if (undefined){
-    console.log('undefined will not trigger');
-}
-if (NaN){
-    console.log('NaN will not trigger');
-}
-if (true){
-    console.log('true will trigger');
-}
-if (1.1){
-    console.log('1.1 will trigger');
-}
-if ('string'){
-    console.log('string will trigger');
-}
-if (-1){
-    console.log('-1 will trigger');
-}
-if ({}){
-    console.log('object will trigger');
-}
-if ([]){
-    console.log('array will trigger');
-}
-
-const firstName = prompt('first name');
-const lastName = prompt('last name');
-
-// if (firstName && lastName) {
-//     console.log('firstName and lastname is truthy');
-// }
-// if (firstName || lastName) {
-//     console.log('firstName or lastname is truthy');
-// }
-
-
-if (!firstName || !lastName || '') {
-alert('you must enter a first and last name');
+// keyword functionName (parameter){command, i.e. work}
+function triple(number){
+    return number * 3;
 }
 
 
+console.log(triple(5))
 
-// comparison operators
+const user = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 30,
+    greeting: function greet(){
+        return `Hello, my name's ${this.firstName} ${this.lastName} and I am ${this.age} years old.`;
+    },
+    haveBirthday: function(number){
+        this.age += number;
+    }
+}
+console.log(user.greeting());
+
+/*
+function add(a, b){
+    console.log(this, 'this');
+    return a + b;
+}
+add(); 
+*/
+
+const button = document.querySelector('button');
+const colors = ['red', 'green', 'blue']
+button.addEventListener('click', function WhatToDoWhenClick(){
+    console.log(this, 'this');
+    user.haveBirthday(1);
+    document.querySelector('h1').innerHTML = user.greeting();
+    document.querySelector('body').style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+});
+
+const birdImg = document.querySelector('img');
+    birdImg.style.position = 'absolute';
+    birdImg.style.top = '100px';
+    let gravity = 0;
+
+function gameLoop() {
+    const birdTop = parseInt(birdImg.style.top);
+    console.log(birdTop)
+    console.log(birdImg.style.top)
+    if (gravity < 8){
+        gravity += 0.2;
+    }
+    birdImg.style.top = (birdTop + gravity) + 'px';
+    requestAnimationFrame(gameLoop);
+}
+gameLoop();
+
+document.addEventListener('click', function(){
+    gravity = -8;
+})
