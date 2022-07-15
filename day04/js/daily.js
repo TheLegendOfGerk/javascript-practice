@@ -1,9 +1,9 @@
 let firstNum = parseInt(prompt('First number?'));
 let secondNum = parseInt(prompt('Second number?'));
 console.log(firstNum, secondNum)
-if (isNaN(firstNum || secondNum)){
+if (isNaN(firstNum) || isNaN(secondNum)){
     alert('Oops, we didn\'t recognize your input! Be sure to only use numeric characters. e.g. 1234.');
-    reload();
+    location.reload();
 }
 else {
     if (firstNum > secondNum){
