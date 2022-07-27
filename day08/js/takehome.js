@@ -11,8 +11,13 @@ class Car {
         {Make: 'Nissan',
         Model: ['Sentra', 'Altima', 'Maxima', 'Leaf']},
     ]
-    randomMake = this.carList[Math.floor(this.length*Math.random)].Make;
-    constructor(carMake = randomMake, carModel = randomModel, carYear = randomYear, carColor = randomColor) {
+    
+    randomCar () {
+        var randomMake = Car.carList[Math.floor(Math.random*(Car.carList.length))].Make[0];
+        console.log(randomMake)
+
+    }
+    constructor(carMake = this.randomCar().randomMake, carModel = randomModel, carYear = randomYear, carColor = randomColor) {
         var table = document.getElementById('carTable')
         var row = table.insertRow();
         var cell1 = row.insertCell(0);
@@ -28,7 +33,7 @@ class Car {
 }
 
 new Car('Ford', 'Fusion', '2009', 'Red')
-new Car('Ford', 'Fusion', '2009', 'Green')
-new Car('Ford', 'Fusion', '2009', 'Yellow')
-new Car('Ford', 'Fusion', '2009', 'Blue')
+new Car('Honda', 'Civic', '1997', 'Green')
+new Car('Toyota', 'Sprinter', '1985', 'Red/Black')
+new Car('Nissan', 'Stanza', '2001', 'Powder Blue')
 new Car()
