@@ -15,7 +15,7 @@ const forms = document.forms;
 forms.profile.addEventListener('submit', function(event){
   event.preventDefault();
   console.log(this.username.value);
-  fetch('https://24a0-2601-205-380-1c10-7999-88d4-13dc-381.ngrok.io', {
+  fetch('https://cc29-2601-205-380-1c10-8d2c-15cc-97e3-9221.ngrok.io', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ forms.profile.addEventListener('submit', function(event){
 forms.questions.addEventListener('submit', function(event){
     event.preventDefault();
     console.log(this.qText.value);
-    fetch('https://24a0-2601-205-380-1c10-7999-88d4-13dc-381.ngrok.io', {
+    fetch('https://cc29-2601-205-380-1c10-8d2c-15cc-97e3-9221.ngrok.io', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
