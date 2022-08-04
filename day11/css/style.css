@@ -1,0 +1,10 @@
+button{
+    background-color: #4CAFDD;
+}
+
+.active{
+    background-color: red;
+    color: white;
+    font-size: 12px;
+
+}
